@@ -12,12 +12,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(publicPath));
 
-app.set('views', path.join(__dirname, './public/views'));
+app.set('views', path.join(__dirname, './src/views'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
 res.render('index', );
 });
+
+app.get('/carrito', (req, res) => {
+  res.render('pageCarrito', );
+  });
 
 
 const PORT = process.env.ENV || 4000;
