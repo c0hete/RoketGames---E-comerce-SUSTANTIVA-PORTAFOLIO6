@@ -1,0 +1,35 @@
+    <!-- modal contactanos Inicio -->
+    <div id="id03" class="modal_contactanos">
+   
+        <span onclick="document.getElementById('id03').style.display='none'" class="close-contactanos" title="Close Modal">&times;</span>
+        <form class="modal-content-contactanos animate bg-dark text-primary position-sticky" action="/action_page.php">
+          <img class="rocket__logo mr-auto" src="img/logo-pequeño.png">
+          <div class="container_contactanos">
+            <form action="/action_page.php">
+              <label for="fname">Nombre</label>
+              <input type="text" id="fname" name="firstname" placeholder="Tu nombre acá..">
+          
+              <label for="lname">Apellido</label>
+              <input type="text" id="lname" name="lastname" placeholder="Tu apellido acá..">
+          
+              <label for="country">País</label>
+              <select id="country" name="country">
+                <option value="australia">Chile</option>
+                <option value="canada">Argentina</option>
+                <option value="usa">Perú</option>
+                <option value="usa">Bolivia</option>
+                <option value="usa">Colombia</option>
+                <option value="usa">Venezuela</option>
+              </select>
+          
+              <label for="subject">Cuentanos, en que te podemos ayudar?</label>
+              <textarea id="subject" name="subject" placeholder="Deja acá tu mensaje ...!" style="height:200px"></textarea>
+          
+              <input class="btn-success" type="submit" value="Enviar">
+            </form>
+          
+          </div>
+        </form>
+      </div>
+      <!-- modal contactanos Fin -->
+      </div> 
