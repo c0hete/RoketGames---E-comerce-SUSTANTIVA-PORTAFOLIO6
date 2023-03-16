@@ -1,0 +1,25 @@
+<%- include('header.ejs', { pageTitle: 'RocketGames' }) %>
+<h2 class="fs-2 m-4 text-primary ">Productos</h2>
+<div class="container" id="productos">
+  <div class="row">
+    <!-- Loop para recorrer cada producto y crear una tarjeta para cada uno -->
+    <% productos.forEach(function(productos) { %>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="<%= productos.image %>" class="card-img-top" alt="<%= productos.nombre %>">
+        <div class="card-body">
+          <h5 class="card-title"><%= productos.nombre %></h5>
+          <p class="card-text"><%= productos.descripcion %></p>
+          <p class="card-text">$<%= productos.precio.toFixed(2) %></p>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary add-to-cart" data-id="<%= productos.id %>">Agregar al carrito</button>
+          <button onclick="window.location.href='/productos/<%= productos.id %>/resumen'" class="btn btn-secondary producto-summary">Resumen</button>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+</div>
+<%- include('footer.ejs') %>
+  

@@ -13,60 +13,46 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/styles.css" />
+    
   </head>
   <body>
     <header class="container-fluid bg-dark position-sticky top-0">
-    <div>
-     <ul
-       class="nav nav-pills mb-3 py-1 container"
-       id="pills-tab"
-       role="tablist"
-     >
-       <li class="nav-item" role="presentation">
-         <a
-           class="nav-link active"
-           id="pills-home-tab"
-           data-bs-toggle="pill"
-           data-bs-target="#pills-home"
-           type="button"
-           role="tab"
-           aria-controls="pills-home"
-           aria-selected="true"
-           >Home</a
-         >
-       </li>
-       <li class="nav-item" role="presentation">
-         <a
-           class="nav-link "
-           id="pills-profile-tab"
-           data-bs-toggle="pill"
-           data-bs-target="#pills-profile"
-           type="button"
-           role="tab"
-           aria-controls="pills-profile"
-           aria-selected="false"
-           >Productos</a
-         >
-       </li>
-       <li class="nav-item" role="presentation">
-         <a
-           class="nav-link "
-           id="pills-contact-tab"
-           data-bs-toggle="pill"
-           data-bs-target="#pills-contact"
-           type="button"
-           role="tab"
-           aria-controls="pills-contact"
-           aria-selected="false">Carrito</a
-         >
-       </li>
-       <li class="nav-item" role="presentation">
-         <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="nav-link "id="pills-registro-tab"data-bs-toggle="pill"data-bs-target="#pills-registro"
-        type="button"
-           role="tab"
-           aria-controls="pills-registro"
-           aria-selected="false">Ingresar</button>
-       </li>
-     </ul>
-     </div>
+    <!-- aca empieza la nueva nav -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary " data-bs-theme="dark">
+      <div class="container-fluid ">
+        <a class="navbar-brand text-primary" href="/">RocketGames</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-primary" aria-current="page" href="/">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="/productos">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="/carrito" >Carrito de Compras</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Iniciar sesión / Registrarse
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item  text-primary" href="#">Iniciar sesión</a></li>
+                <li><a class="dropdown-item text-primary" href="#">Registrarse</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-primary" href="#">Olvidaste tu contraseña?</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- aqui termina la nueva nav -->
     </header>

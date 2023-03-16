@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "nombre": "God of War",
+    "nombre": "God of War IV",
     "descripcion": "Juego de acción y aventura en tercera persona, con elementos de rol y puzzles",
     "precio": 39900,
     "stock": 10,
@@ -19,15 +19,24 @@
   },
   {
     "id": 3,
+    "nombre": "God of War",
+    "descripcion": "Juego de acción y aventura en tercera persona, con elementos de rol y puzzles",
+    "precio": 39900,
+    "stock": 10,
+    "imagen": "https://via.placeholder.com/150",
+    "resumen": "God of War es un juego de acción y aventura en tercera persona desarrollado por Santa Monica Studio y publicado por Sony Interactive Entertainment. El juego sigue la historia de Kratos, un guerrero espartano que busca venganza contra los dioses griegos después de que estos lo traicionaran y le quitaran todo lo que amaba.Kratos se embarca en una peligrosa misión para matar a los dioses del Olimpo, enfrentándose a criaturas mitológicas y resolviendo acertijos en su camino. A lo largo del juego, Kratos se encuentra con su hijo Atreus, quien lo acompaña en su viaje y lo ayuda en la lucha contra los dioses. El juego presenta una jugabilidad intensa y desafiante, con combates fluidos y emocionantes. También cuenta con una historia emocionalmente impactante y una impresionante presentación visual y sonora.En resumen, God of War es un juego épico que combina acción, aventura y mitología griega para crear una experiencia de juego inolvidable."
+  },
+  {
+    "id": 4,
     "nombre": "Horizon Zero Dawn",
     "descripcion": "Juego de acción y aventura en tercera persona, ambientado en un mundo post-apocalíptico donde la humanidad vive en tribus primitivas",
     "precio": 29900,
     "stock": 7,
     "imagen": "https://via.placeholder.com/150",
     "resumen": "Horizon Zero Dawn es un juego de acción y aventura en un mundo post-apocalíptico donde la humanidad ha caído y la naturaleza ha reclamado la tierra. El jugador controla a Aloy, una joven cazadora que busca descubrir la verdad detrás de su pasado y el misterio de las máquinas animales que dominan el mundo. A medida que Aloy explora el mundo, se encuentra con tribus humanas en conflicto y descubre una conspiración que amenaza con destruir todo lo que queda de la humanidad. Aloy debe luchar contra las máquinas animales y los enemigos humanos para descubrir la verdad y salvar al mundo. El juego cuenta con un sistema de combate emocionante y desafiante, así como una historia profunda y emocionalmente impactante. También presenta un mundo abierto hermoso y detallado, lleno de secretos y misterios por descubrir."
-  },
+  }, 
   {
-    "id": 4,
+    "id": 5,
     "nombre": "Spider-Man",
     "descripcion": "Juego de acción y aventura en tercera persona, basado en el popular superhéroe de Marvel Comics",
     "precio": 49900,
@@ -36,7 +45,7 @@
     "resumen": "Spider-Man es un juego de acción y aventura en el que el jugador controla al icónico superhéroe de Marvel, Spider-Man. El juego se desarrolla en la ciudad de Nueva York, donde Spider-Man debe enfrentarse a diversos villanos y proteger a los ciudadanos de la ciudad. El juego cuenta con una historia principal, así como misiones secundarias y actividades opcionales que el jugador puede completar para mejorar las habilidades de Spider-Man y desbloquear nuevos trajes y gadgets. El juego también presenta un sistema de combate fluido y emocionante, así como la capacidad de balancearse por la ciudad con las telarañas de Spider-Man. En general, Spider-Man es un juego emocionante y divertido que ofrece una experiencia auténtica de ser el superhéroe arácnido más famoso del mundo."
   },
   {
-    "id": 5,
+    "id": 6,
     "nombre": "Bloodborne",
     "descripcion": "Juego de acción y rol en tercera persona, con temática de terror y ambientado en una ciudad gótica",
     "precio": 39900,
@@ -45,7 +54,7 @@
     "resumen": "Bloodborne es un juego de rol y acción en tercera persona desarrollado por FromSoftware. El juego se desarrolla en la ciudad de Yharnam, una ciudad gótica y oscura que está plagada de criaturas peligrosas y monstruosas. El jugador asume el papel de un cazador, que debe explorar la ciudad y luchar contra los enemigos para descubrir los secretos detrás de la misteriosa enfermedad que está afectando a la ciudad. El juego es conocido por su dificultad y su estilo de juego desafiante, que requiere que el jugador sea estratégico y preciso en sus movimientos y ataques. A medida que el jugador avanza en el juego, se desbloquean nuevas armas y habilidades, lo que permite al jugador personalizar su estilo de juego y enfrentar desafíos cada vez más difíciles."
   },
   {
-    "id": 6,
+    "id": 7,
     "nombre": "Uncharted 4: El Desenlace del Ladrón",
     "descripcion": "Juego de acción y aventura en tercera persona, con elementos de plataformas y puzzles",
     "precio": 39900,
@@ -54,7 +63,7 @@
     "resumen": "Uncharted 4: El Desenlace del Ladrón es un juego de aventuras y acción en tercera persona desarrollado por Naughty Dog y publicado por Sony Computer Entertainment. El juego sigue al protagonista Nathan Drake, un cazador de tesoros retirado, mientras se embarca en una última aventura para encontrar el tesoro del pirata Henry Avery. El juego se desarrolla en varios lugares del mundo, incluyendo Madagascar, Italia y Escocia, y presenta una variedad de desafíos de plataformas, rompecabezas y combate. Además de Nathan, el juego presenta a varios personajes nuevos y antiguos, incluyendo a su hermano Sam y su esposa Elena. A medida que Nathan y su equipo se acercan al tesoro, se enfrentan a varios obstáculos, incluyendo un grupo de mercenarios liderados por el villano Rafe Adler. La historia del juego se centra en la relación de Nathan con su hermano Sam y su lucha por reconciliarse con su pasado y su identidad como cazador de tesoros. En general, Uncharted 4: El Desenlace del Ladrón es un juego emocionante y emocionalmente cargado que ofrece una experiencia de juego satisfactoria y una conclusión satisfactoria para la historia de Nathan Drake."
   },
   {
-    "id": 7,
+    "id": 8,
     "nombre": "Persona 5",
     "descripcion": "Juego de rol japonés, con elementos de simulación de vida y combate por turnos",
     "precio": 59900,
@@ -63,7 +72,7 @@
     "resumen": "Persona 5 es un juego de rol desarrollado por Atlus en el que el jugador asume el papel de un estudiante de secundaria en Tokio que se convierte en un ladrón fantasma para luchar contra la corrupción en la sociedad. El juego se divide en dos partes: la vida diaria del protagonista, que incluye ir a la escuela, hacer amigos y mejorar habilidades sociales, y la exploración de mazmorras, donde el jugador lucha contra enemigos y obtiene nuevos Personas para usar en batalla. A medida que avanza la trama, el jugador descubre una conspiración detrás de la corrupción y debe enfrentarse a poderosos enemigos para salvar a la ciudad. El juego también aborda temas como la justicia social, la identidad y la libertad personal."
   },
   {
-    "id": 8,
+    "id": 9,
     "nombre": "The Witcher 3: Wild Hunt",
     "descripcion": "Juego de rol de mundo abierto, con elementos de acción y aventura",
     "precio": 49900,
@@ -72,8 +81,8 @@
     "resumen": "The Witcher 3: Wild Hunt es un juego de rol de acción en mundo abierto desarrollado por CD Projekt Red. El jugador asume el papel de Geralt de Rivia, un cazador de monstruos conocido como un 'witcher', que busca a su hija adoptiva perdida mientras se enfrenta a una amenaza sobrenatural conocida como la Cacería Salvaje. A lo largo del juego, Geralt debe tomar decisiones que afectan el resultado de la historia y enfrentarse a enemigos peligrosos en un mundo lleno de personajes complejos y misiones secundarias intrigantes. El juego también presenta un sistema de combate profundo y una variedad de opciones de personalización para el personaje del jugador. The Witcher 3: Wild Hunt ha sido aclamado por la crítica y es considerado uno de los mejores juegos de la década."
   },
   {
-    "id": 9,
-    "nombre": "Ratchet & Clank",
+    "id": 10,
+    "nombre": "Ratchet & Clank Rift Apart",
     "descripcion": "Juego de plataformas y acción en tercera persona, con elementos de disparos y puzzles",
     "precio": 39900,
     "stock": 10,
@@ -81,7 +90,7 @@
     "resumen": "Ratchet & Clank es un juego de acción y aventura en el que el jugador controla a Ratchet, un lombax mecánico, y a su compañero Clank, un robot pequeño y astuto. Juntos, viajan por diferentes planetas para detener al malvado Chairman Drek, quien planea destruir la galaxia. Durante su viaje, Ratchet y Clank deben luchar contra enemigos, resolver acertijos y mejorar sus habilidades y armas. El juego cuenta con una historia emocionante, personajes divertidos y una jugabilidad adictiva."
   },
   {
-    "id": 10,
+    "id": 11,
     "nombre": "Shadow of the Colossus",
     "descripcion": "Juego de acción y aventura",
     "precio": 39900,
@@ -90,7 +99,7 @@
     "resumen": "Shadow of the Colossus es un juego de aventuras y acción en el que el jugador controla a un joven llamado Wander, quien busca revivir a una chica llamada Mono sacrificando a 16 colosos gigantes. Cada coloso es un desafío único que requiere que el jugador encuentre su debilidad y lo derrote escalando y atacando sus puntos débiles. A medida que Wander derrota a cada coloso, su salud y resistencia aumentan, lo que le permite enfrentar desafíos aún mayores. Sin embargo, cada victoria tiene un costo, ya que la salud de Wander disminuye y su cuerpo se debilita. Al final, el jugador debe enfrentar una elección difícil que determinará el destino de Wander y Mono. Shadow of the Colossus es conocido por su hermoso diseño visual, su música emotiva y su narrativa conmovedora."
   },
   {
-    "id": 11,
+    "id": 12,
     "nombre": "Death Stranding",
     "descripcion": "Videojuego de acción y aventura de mundo abierto ambientado en un Estados Unidos postapocalíptico",
     "precio": 75000,
@@ -99,7 +108,7 @@
     "resumen": "Death Stranding es un juego de acción y aventura desarrollado por Kojima Productions y publicado por Sony Interactive Entertainment. El juego tiene lugar en un mundo post-apocalíptico donde la humanidad ha sido devastada por un evento catastrófico conocido como 'Death Stranding'. El jugador asume el papel de Sam Porter Bridges, un mensajero que debe viajar a través de un paisaje peligroso y hostil para entregar suministros vitales a las comunidades aisladas. A lo largo del juego, Sam debe enfrentarse a criaturas sobrenaturales conocidas como 'Beached Things' (BTs) y a otros peligros mientras intenta reconectar a la humanidad y descubrir la verdad detrás del Death Stranding. El juego también cuenta con un modo multijugador en línea donde los jugadores pueden ayudarse mutuamente construyendo estructuras y compartiendo recursos."
   },
   {
-    "id": 12,
+    "id": 13,
     "nombre": "Ghost of Tsushima",
     "descripcion": "Videojuego de acción-aventura ambientado en la isla de Tsushima durante la invasión mongola de Japón en el siglo XIII",
     "precio": 65000,
@@ -107,8 +116,9 @@
     "imagen": "https://via.placeholder.com/150",
     "resumen": "Ghost of Tsushima es un juego de acción y aventura desarrollado por Sucker Punch Productions y publicado por Sony Interactive Entertainment. El juego se desarrolla en la isla de Tsushima durante la invasión mongola de Japón en el siglo XIII. El jugador controla a Jin Sakai, un samurái que lucha contra los invasores mongoles y se convierte en el 'fantasma de Tsushima' para derrotarlos. El juego presenta un mundo abierto que el jugador puede explorar libremente, con misiones principales y secundarias que se pueden completar para avanzar en la historia. El combate se basa en el uso de la espada y otras armas, así como en habilidades especiales que se pueden desbloquear a medida que se avanza en el juego.Ghost of Tsushima también presenta elementos de sigilo y exploración, con el jugador capaz de esconderse en la hierba alta y usar el entorno para su ventaja. El juego también tiene un sistema de moralidad que afecta la forma en que los personajes interactúan con Jin y cómo se desarrolla la historia.En general, Ghost of Tsushima ha sido bien recibido por la crítica y el público por su hermoso mundo abierto, su historia emocionante y su combate satisfactorio."
   },
-  {
-    "id": 13,
+   {
+    
+    "id": 14,
     "nombre": "Marvel's Avengers",
     "descripcion": "Videojuego de acción-aventura y rol basado en los personajes de los cómics de Marvel",
     "precio": 70000,

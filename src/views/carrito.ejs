@@ -1,32 +1,39 @@
-<!--CARRITO INICIO-->
-<div
-class="tab-pane fade carrito""
-id="pills-contact"
-role="tabpanel"
-aria-labelledby="pills-contact-tab"
-tabindex="0">
-<br/>
+<%- include('header.ejs', { pageTitle: 'RocketGames' }) %>
+<div class="container">
 <table class="table table-dark table-borderless">
   <thead>
     <tr class="text-primary">
       <th class="fs-2" scope="col"></th>
-      <th class="fs-2"scope="col">Productos</th>
-      <th class="fs-2"scope="col">Precio</th>
-      <th class="fs-2"scope="col">Cantidad</th>
+      <th class="fs-2" scope="col">Productos</th>
+      <th class="fs-2" scope="col">Precio</th>
+      <th class="fs-2" scope="col">Cantidad</th>
     </tr>
   </thead>
   <tbody class="tbody">
-
+    <% productos.forEach(producto => { %>
+      <tr>
+        <td><img src="<%= producto.imagen %>" alt="<%= producto.nombre %>" class="img-thumbnail"></td>
+        <td><%= producto.nombre %></td>
+        <td><%= producto.precio %></td>
+        <td>
+          <div class="input-group">
+            <button class="btn btn-outline-secondary" type="button" onclick="decrementarCantidad(this)">-</button>
+            <input type="number" class="form-control cantidad" value="1" min="1">
+            <button class="btn btn-outline-secondary" type="button" onclick="incrementarCantidad(this)">+</button>
+          </div>
+        </td>
+      </tr>
+    <% }); %>
   </tbody>
 </table>
 <br><br>
 <div class="row mx-4">
-<div class="col">
+  <div class="col">
     <h3 class="itemCartTotal text-white">Total 0</h3>
-</div>    
-<div class="col d-flex justify-content-end">
+  </div>
+  <div class="col d-flex justify-content-end">
     <button class="btn btn-success">COMPRAR</button>
+  </div>
 </div>
 </div>
-</div>
-<!--CARRITO FIN-->
+<%- include('footer.ejs') %>

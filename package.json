@@ -4,8 +4,8 @@
   "description": "Carrito de compras en JavaScript",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/c0hete/RoketGames---E-comerce-SUSTANTIVA-PORTAFOLIO6#readme",
   "dependencies": {
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "multer": "^1.4.5-lts.1",
