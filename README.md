@@ -1,31 +1,95 @@
-# Portafolio-Ecomerce-Sustantiva
+const express = require("express");
+const router = express.Router();
+const fs = require("fs").promises;
+const path = require("path");
+const productosController = require("../controllers/productosController");
+const { productosFilePath } = require("../../config");
+const session = require('express-session');
+const MemoryStore = require('memorystore')(session);
 
-Carrito de compras en JavaScript
+// Configurar el middleware de sesión
+router.use(session({
+  secret: 'my-secret',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false },
+  store: new MemoryStore({
+    checkPeriod: 86400000 // Limpiar la memoria de almacenamiento cada 24 horas
+  })
+}));
 
-Este es un ejemplo de un carrito de compras en JavaScript, que utiliza el Local Storage para almacenar la información del carrito entre sesiones.
-Funcionamiento
+// Middleware para manejar errores
+function errorHandler(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send("Error interno del servidor");
+}
 
-Al hacer clic en el botón "Agregar al carrito" en uno de los productos, se añade una fila correspondiente en la tabla del carrito. Desde allí, se puede modificar la cantidad de cada producto, eliminar un producto del carrito, o vaciar todo el carrito.
+router.get("/", (req, res) => {
+  res.render("index");
+});
 
-El total del carrito se calcula automáticamente en base a los precios y cantidades de los productos.
-Tecnologías utilizadas
+router.get("/productos", async (req, res, next) => {
+  try {
+    const data = await fs.readFile(productosFilePath, "utf8");
+    const productos = JSON.parse(data);
+    res.render("productos", { productos });
+  } catch (err) {
+    next(err);
+  }
+});
 
-    HTML5
-    CSS3
-    JavaScript
+router.get("/productos/:id/resumen", async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const data = await fs.readFile(productosFilePath, "utf8");
+    const productos = JSON.parse(data);
+    const producto = productos.find((prod) => prod.id === parseInt(id));
+    if (producto) {
+      res.render("resumen", { producto });
+    } else {
+      res.status(404).send("Producto no encontrado");
+    }
+  } catch (err) {
+    next(err);
+  }
+});
 
-Cómo ejecutar el código
+router.get("/carrito", function (req, res) {
+  // Obtener la información del carrito del usuario
+  var carrito = req.session.carrito || {};
+  var productosCarrito = req.session.productosCarrito || {};
 
-Para ejecutar el código, simplemente abre el archivo index.html en tu navegador web. El archivo script.js contiene el código JavaScript que se utiliza en la página.
+  // Renderizar la vista del carrito
+  res.render("carrito", { carrito, productosCarrito });
+});
 
-Este código fue escrito por José Alvarado como un ejemplo de un carrito de compras en JavaScript.
+router.post("/carrito/agregar", async (req, res, next) => {
+  try {
+    const id = req.body.id;
+    const data = await fs.readFile(productosFilePath, "utf8");
+    const productos = JSON.parse(data);
+    const producto = productos.find((prod) => prod.id === parseInt(id));
+    if (producto) {
+      // Agregar el producto al carrito del usuario
+      var carrito = req.session.carrito || {};
+      var productosCarrito = req.session.productosCarrito || {};
+      if (carrito.hasOwnProperty(id)) {
+        carrito[id]++;
+      } else {
+        carrito[id] = 1;
+        productosCarrito[id] = producto;
+      }
+      req.session.carrito = carrito;
+      req.session.productosCarrito = productosCarrito;
+      res.redirect("/carrito");
+    } else {
+      res.status(404).send("Producto no encontrado");
+    }
+  } catch (err) {
+    next(err);
+  }
+});
 
-REPOSITORIO.
-https://github.com/c0hete/Portafolio-Ecomerce-Sustantiva.git
+router.use(errorHandler);
 
-GIT PAGE.
-https://c0hete.github.io/Portafolio-Ecomerce-Sustantiva/
-
-
-
-
+module.exports = router;

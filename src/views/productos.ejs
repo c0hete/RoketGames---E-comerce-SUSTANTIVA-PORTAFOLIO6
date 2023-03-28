@@ -3,23 +3,37 @@
 <div class="container" id="productos">
   <div class="row">
     <!-- Loop para recorrer cada producto y crear una tarjeta para cada uno -->
-    <% productos.forEach(function(productos) { %>
+    <% productos.forEach(function(producto) { %>
     <div class="col-md-4 mb-4">
       <div class="card">
-        <img src="<%= productos.image %>" class="card-img-top" alt="<%= productos.nombre %>">
+        <img src="<%= producto.image %>" class="card-img-top" alt="<%= producto.nombre %>">
         <div class="card-body">
-          <h5 class="card-title"><%= productos.nombre %></h5>
-          <p class="card-text"><%= productos.descripcion %></p>
-          <p class="card-text">$<%= productos.precio.toFixed(2) %></p>
+          <h5 class="card-title"><%= producto.nombre %></h5>
+          <p class="card-text"><%= producto.descripcion %></p>
+          <p class="card-text">$<%= producto.precio.toFixed(2) %></p>
         </div>
         <div class="card-footer">
-          <button class="btn btn-primary add-to-cart" data-id="<%= productos.id %>">Agregar al carrito</button>
-          <button onclick="window.location.href='/productos/<%= productos.id %>/resumen'" class="btn btn-secondary producto-summary">Resumen</button>
+          <button class="btn btn-primary agregar-carrito" data-id="<%= producto.id %>">Agregar al carrito</button>
+          <button onclick="window.location.href='/productos/<%= producto.id %>/resumen'" class="btn btn-secondary producto-summary">Resumen</button>
         </div>
       </div>
     </div>
     <% }); %>
   </div>
 </div>
+<script>
+  const agregarCarritoButtons = document.querySelectorAll('.agregar-carrito');
+  agregarCarritoButtons.forEach((button) => {
+    button.addEventListener('click', async (event) => {
+      const productId = button.dataset.id;
+      const response = await fetch(`/productos/agregar-al-carrito/${productId}`, { method: 'POST' });
+      const data = await response.json();
+      console.log(data.message);
+      const carritoContador = document.getElementById('carrito-contador');
+      const numItems = parseInt(carritoContador.textContent);
+      carritoContador.textContent = numItems + 1;
+    });
+  });
+</script>
+
 <%- include('footer.ejs') %>
-  

@@ -1,0 +1,39 @@
+<%- include('header.ejs', { pageTitle: 'RocketGames' }) %>
+<body>
+  <div class="container-fluid w-50 d-flex flex-column align-items-center">
+      <h2 class="mb-5 text-light">Login</h2> 
+    <% if (typeof errors != 'undefined') { %>
+      <div class="alert alert-danger">
+        <% errors.forEach(error => { %>
+          <div><%= error.message %></div>
+        <% }) %>
+      </div>
+    <% } %>
+
+    <% if(messages.success_msg) { %>
+      <div class="alert alert-success text-light"><%= messages.success_msg %></div>
+    <% } %>
+
+    <% if (messages.error) { %>
+      <div class="alert alert-danger text-light"><%= messages.error %></div>
+    <% } %>
+    <form class="border border-danger rounded p-3" action="/login" method="POST">
+      <div class="mb-3 form-group">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="mb-3 form-group">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-danger btn-block">Login</button>
+      </div>
+      <div class="text-center mt-3">
+        <a href="/register" class="text-danger">Register</a>
+      </div>
+    </form>
+  </div>
+  <%- include('footer.ejs') %>
+</body>
+</html>

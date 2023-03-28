@@ -1,0 +1,46 @@
+<%- include('header.ejs', { pageTitle: 'RocketGames' }) %>
+<li class="nav-item text-light">
+  <a class="nav-link" href="/logout">Log out</a>
+</li>
+<body>
+  <div class="container mt-5 text-light">
+    <div class="container">
+   
+      <% if (isAdmin) { %>
+        <span><h1>ADMIN</h1></span> <span>
+        <a href="/admin" class="btn btn-primary">Administrar</a>
+      <% } %>
+    </span>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <div class="text-center mb-4">
+          <img src="/<%= userId %>/image" class="avatar" alt="Profile Picture">
+          <h3 class="mt-2"><%= user.charAt(0).toUpperCase() + user.slice(1) %></h3>
+        </div>
+        <input type="file" id="profilePicture" class="form-control file-input mb-4" name="profilePicture">
+        <button id="changeProfilePicture" class="btn btn-primary">Cambiar foto de perfil</button>
+      </div>
+      <div class="col-md-8">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="purchase-history-tab" data-bs-toggle="tab" href="#purchase-history" role="tab" aria-controls="purchase-history" aria-selected="true">Historial de compras</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="comments-tab" data-bs-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">Comentarios realizados</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="stats-tab" data-bs-toggle="tab" href="#stats" role="tab" aria-controls="stats" aria-selected="false">Estadísticas</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="purchase-history" role="tabpanel" aria-labelledby="purchase-history-tab">
+            <!-- Historial de compras -->
+          </div>
+        </div>
+      </div>
+      
+        <%- include('footer.ejs') %>
+    </body>
+</html>

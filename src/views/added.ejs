@@ -1,0 +1,11 @@
+<%- include('header.ejs', { pageTitle: 'RocketGames' }) %>
+<div style="text-align:center;">
+    <h1>Has agregado exitosamente <%= producto.nombre %> a tu carrito!</h1>
+    <img src="<%= productos.imagen %>" alt="Imagen de confirmación">
+  </div>
+  <div style="text-align:center;">
+    <a href="/productos"><button>Volver a producto</button></a>
+    <a href="/carrito"><button>Ir al carrito</button></a>
+  </div>
+
+<%- include('footer.ejs') %>

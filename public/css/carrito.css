@@ -1,0 +1,20 @@
+.table {
+    background-color: #fff;
+  }
+  
+  .table td, .table th {
+    vertical-align: middle !important;
+  }
+  
+  .table th {
+    font-size: 18px;
+  }
+  
+  .table th, .table td {
+    padding: 15px;
+  }
+  
+  .table th:last-child, .table td:last-child {
+    text-align: center;
+  }
+  
